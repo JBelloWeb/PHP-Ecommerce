@@ -1,3 +1,3 @@
 <?php
-    $_SERVER["DOCUMENT_ROOT"] = "/parcial"};
+    $_SERVER["DOCUMENT_ROOT"] = "/parcial";
 ?>

@@ -61,8 +61,8 @@ class Secciones {
         }
 
         foreach ($JSONData as $value){
-            if ($value["inMenu"]) {
-                $secciones_validas[] = $value["vinculo"];
+            if (isset($value->inMenu) && $value->inMenu) {
+                $secciones_validas[] = $value->vinculo;
             }
         }
         return $secciones_validas;

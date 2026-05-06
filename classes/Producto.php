@@ -1,0 +1,95 @@
+<?php
+class Producto
+{
+    private $_id;
+    private $_nombre;
+    private $_descripcion;
+    private $_categoria;
+    private $_precio;
+
+    public function getId(){
+        return $this->_id;
+    }
+    public function getNombre(){
+        return $this->_nombre;
+    }
+    public function getDescripcion(){
+        return $this->_descripcion;
+    }
+     public function getCategoria(){
+        return $this->_categoria;
+    }
+    public function getPrecio(){
+        return $this->_precio;
+    }
+
+    public function setId(){
+        $this->_id = $id;
+    }
+    public function setNombre(){
+        $this->_nombre = $nombre;
+    }
+    public function setDescripcion(){
+        $this->_descripcion = $descripcion;
+    }
+     public function setCategoria(){
+        $this->_categoria = $_categoria;
+    }
+    public function setPrecio(){
+        $this->_precio = $precio;
+    }
+
+    public static function catalogo_completo():array 
+    {
+        $catalogo = [];
+        $JSON = file_get_contents('resources/productos.json');
+        $JSONData = json_decode($JSON);
+
+        foreach ($JSONData as $value){
+            $producto = new self();
+
+            $producto->_id = $value->id;
+            $producto->_nombre = $value->nombre;
+            $producto->_descripcion = $value->descripcion;
+            $producto->_categoria = $value->categoria;
+            $producto->_precio = $value->precio;
+
+            $catalogo[] = $producto;
+        }
+        return $catalogo;
+    }
+
+    public static function todasLasCategorias():array
+    {
+        $catalogo = self::catalogo_completo();
+        foreach ($catalogo as $c){
+            $categoria[] = $c->_categoria;
+        }
+
+        $categorias = array_unique($categoria);
+        sort($categorias);
+        return $categorias;
+    }
+
+    public static function catalogo_x_categoria(string $categoria):array 
+    {
+        $resultado = [];
+        $catalogo = self::catalogo_completo();
+
+        foreach($catalogo as $c){
+            if($c->_categoria == $categoria) $resultado[] = $c;
+        }
+        return $resultado;
+    }
+
+    public static function producto_x_id(mixed $idProducto): Producto | null 
+    {
+        $catalogo = self::catalogo_completo();
+
+        foreach($catalogo as $c){
+            if($c->_id == $idProducto) return $c;
+        }
+        return null;
+    }
+}
+?>

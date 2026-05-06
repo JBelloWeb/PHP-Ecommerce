@@ -6,6 +6,24 @@
         "inMenu": true
     },
     {
+        "vinculo": "producto",
+        "texto": "Producto",
+        "title": "Producto",
+        "inMenu": false
+    },
+    {
+        "vinculo": "filtro",
+        "texto": "Filtro",
+        "title": "Filtro",
+        "inMenu": false
+    },
+    {
+        "vinculo": "enviado",
+        "texto": "Enviado",
+        "title": "Enviado",
+        "inMenu": false
+    },
+    {
         "vinculo": "404",
         "texto": "Error 404",
         "title": "Página no encontrada",
