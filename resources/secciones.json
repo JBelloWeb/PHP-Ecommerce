@@ -30,6 +30,12 @@
         "inMenu": false
     },
     {
+        "vinculo": "precio",
+        "texto": "Precio",
+        "title": "Ordenar por precio",
+        "inMenu": false
+    },
+    {
         "vinculo": "enviado",
         "texto": "Enviado",
         "title": "Formulario Enviado",

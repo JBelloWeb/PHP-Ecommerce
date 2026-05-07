@@ -5,7 +5,7 @@
         "descripcion": "El comienzo de la aventura del joven mago en el colegio Hogwarts de Magia y Hechicería.",
         "categoria": "Fantasía",
         "precio": 18500,
-        "img": "assets/hp_1.jpg"
+        "img": "hp_1.jpg"
     },
     {
         "id": "2",
@@ -13,7 +13,7 @@
         "descripcion": "Un misterio oscuro acecha en los pasillos de Hogwarts durante el segundo año de Harry.",
         "categoria": "Fantasía",
         "precio": 19000,
-        "img": "assets/hp_2.jpg"
+        "img": "hp_2.jpg"
     },
     {
         "id": "3",
@@ -21,7 +21,7 @@
         "descripcion": "Un peligroso asesino ha escapado de la prisión mágica y parece buscar a Harry.",
         "categoria": "Fantasía",
         "precio": 19500,
-        "img": "assets/hp_3.jpg"
+        "img": "hp_3.jpg"
     },
     {
         "id": "4",
@@ -29,7 +29,7 @@
         "descripcion": "El Torneo de los Tres Magos trae nuevos desafíos y el resurgimiento de una gran amenaza.",
         "categoria": "Fantasía",
         "precio": 21000,
-        "img": "assets/hp_4.jpg"
+        "img": "hp_4.jpg"
     },
     {
         "id": "5",
@@ -37,7 +37,7 @@
         "descripcion": "La resistencia se organiza en secreto ante la negación del Ministerio de Magia.",
         "categoria": "Fantasía",
         "precio": 22000,
-        "img": "assets/hp_5.jpg"
+        "img": "hp_5.jpg"
     },
     {
         "id": "6",
@@ -45,7 +45,7 @@
         "descripcion": "Harry descubre secretos oscuros sobre el pasado de Voldemort a través de antiguos recuerdos.",
         "categoria": "Fantasía",
         "precio": 22500,
-        "img": "assets/hp_6.jpg"
+        "img": "hp_6.jpg"
     },
     {
         "id": "7",
@@ -53,7 +53,7 @@
         "descripcion": "La batalla final entre el bien y el mal en el mundo mágico.",
         "categoria": "Fantasía",
         "precio": 24000,
-        "img": "assets/hp_7.jpg"
+        "img": "hp_7.jpg"
     },
     {
         "id": "8",
@@ -61,7 +61,7 @@
         "descripcion": "Un joven descubre un libro maldito en el Cementerio de los Libros Olvidados en la Barcelona de 1945.",
         "categoria": "Misterio",
         "precio": 21500,
-        "img": "assets/sombra_viento.jpg"
+        "img": "sombra_viento.jpg"
     },
     {
         "id": "9",
@@ -69,7 +69,7 @@
         "descripcion": "Un joven escritor recibe una oferta imposible de rechazar en una Barcelona oscura y laberíntica.",
         "categoria": "Misterio",
         "precio": 21500,
-        "img": "assets/juego_angel.jpg"
+        "img": "juego_angel.jpg"
     },
     {
         "id": "10",
@@ -77,7 +77,7 @@
         "descripcion": "Viejos fantasmas regresan a la librería Sempere e Hijos, revelando secretos del pasado.",
         "categoria": "Misterio",
         "precio": 22000,
-        "img": "assets/prisionero_cielo.jpg"
+        "img": "prisionero_cielo.jpg"
     },
     {
         "id": "11",
@@ -85,7 +85,7 @@
         "descripcion": "El desenlace magistral de la saga del Cementerio de los Libros Olvidados.",
         "categoria": "Misterio",
         "precio": 23500,
-        "img": "assets/laberinto_espiritus.jpg"
+        "img": "laberinto_espiritus.jpg"
     },
     {
         "id": "12",
@@ -93,7 +93,7 @@
         "descripcion": "La épica historia de traición, años de encierro y la meticulosa venganza de Edmundo Dantés.",
         "categoria": "Clásicos",
         "precio": 28000,
-        "img": "assets/monte_cristo.jpg"
+        "img": "monte_cristo.jpg"
     },
     {
         "id": "13",
@@ -101,7 +101,7 @@
         "descripcion": "Fray Guillermo de Baskerville investiga una serie de misteriosas muertes en una abadía medieval.",
         "categoria": "Ficción Histórica",
         "precio": 24500,
-        "img": "assets/nombre_rosa.jpg"
+        "img": "nombre_rosa.jpg"
     },
     {
         "id": "14",
@@ -109,7 +109,7 @@
         "descripcion": "Clary Fray descubre un mundo oculto de demonios y cazadores de sombras en Nueva York.",
         "categoria": "Fantasía",
         "precio": 18000,
-        "img": "assets/cuidad_hueso.jpg"
+        "img": "cuidad_hueso.jpg"
     },
     {
         "id": "15",
@@ -117,7 +117,7 @@
         "descripcion": "La guerra amenaza el mundo de los cazadores de sombras mientras Valentine busca los Instrumentos Mortales.",
         "categoria": "Fantasía",
         "precio": 18000,
-        "img": "assets/ciudad_ceniza.jpg"
+        "img": "ciudad_ceniza.jpg"
     },
     {
         "id": "16",
@@ -125,7 +125,7 @@
         "descripcion": "Clary debe viajar a la mítica ciudad de Alicante para salvar la vida de su madre.",
         "categoria": "Fantasía",
         "precio": 18500,
-        "img": "assets/ciudad_cristal.jpg"
+        "img": "ciudad_cristal.jpg"
     },
     {
         "id": "17",
@@ -133,7 +133,7 @@
         "descripcion": "Hércules Poirot debe resolver un crimen imposible en el tren más famoso del mundo.",
         "categoria": "Misterio",
         "precio": 16000,
-        "img": "assets/orient_express.jpg"
+        "img": "orient_express.jpg"
     },
     {
         "id": "18",
@@ -141,7 +141,7 @@
         "descripcion": "Diez extraños son invitados a una isla aislada, donde empiezan a ser asesinados uno por uno.",
         "categoria": "Misterio",
         "precio": 16500,
-        "img": "assets/diez_negritos.jpg"
+        "img": "diez_negritos.jpg"
     },
     {
         "id": "19",
@@ -149,7 +149,7 @@
         "descripcion": "La clásica historia de amor, malentendidos y las complejidades de la sociedad inglesa del siglo XIX.",
         "categoria": "Clásicos",
         "precio": 15000,
-        "img": "assets/orgullo_prejuicio.jpg"
+        "img": "orgullo_prejuicio.jpg"
     },
     {
         "id": "20",
@@ -157,6 +157,6 @@
         "descripcion": "La mágica y trágica historia de la familia Buendía en el pueblo de Macondo.",
         "categoria": "Clásicos",
         "precio": 19500,
-        "img": "assets/años_soledad.jpg"
+        "img": "años_soledad.jpg"
     }
 ]

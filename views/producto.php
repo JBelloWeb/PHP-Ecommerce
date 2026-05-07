@@ -14,32 +14,55 @@
 
     <div class="product-detail">
 
-        <figure class="product-detail__figure">
+        <figure>
             <img
-                src="<?= htmlspecialchars($producto->getImg()); ?>"
+                src="<?= htmlspecialchars($images_root . '/portadas/' . $producto->getImg()); ?>"
                 alt="Portada de <?= htmlspecialchars($producto->getNombre()); ?>"
-                class="product-detail__img"
             >
         </figure>
 
-        <div class="product-detail__info">
-            <p class="product-detail__category"><?= htmlspecialchars($producto->getCategoria()); ?></p>
-            <h2 class="product-detail__title"><?= htmlspecialchars($producto->getNombre()); ?></h2>
-            <hr class="product-detail__divider">
-            <p class="product-detail__desc"><?= htmlspecialchars($producto->getDescripcion()); ?></p>
-            <div class="product-detail__price-row">
-                <span class="product-detail__price">$<?= number_format($producto->getPrecio(), 0, ',', '.'); ?></span>
-                <button class="btn-primary">Agregar al carrito</button>
+        <div class="product-detail-info">
+            <p class="detail-category"><?= htmlspecialchars($producto->getCategoria()); ?></p>
+            <h2><?= htmlspecialchars($producto->getNombre()); ?></h2>
+            <hr>
+            <p class="detail-desc"><?= htmlspecialchars($producto->getDescripcion()); ?></p>
+            <div class="detail-price-row">
+                <span class="detail-price">$<?= number_format($producto->getPrecio(), 0, ',', '.'); ?></span>
+                <button id="btn-add-cart" class="btn-primary">Agregar al carrito</button>
             </div>
         </div>
+
+    </div>
+
+    <div id="toast-cart" class="toast-notification">
+        ¡Producto agregado al carrito! 🛒
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnCart = document.getElementById('btn-add-cart');
+            const toast = document.getElementById('toast-cart');
+
+            if(btnCart && toast) {
+                btnCart.addEventListener('click', () => {
+                    toast.classList.add('show');
+
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 3000);
+
+                });
+            }
+        });
+    </script>
 
     </div>
 
 <?php else: ?>
 
     <div class="error-404">
-        <span class="error-404__code">404</span>
-        <p class="error-404__msg">Producto no encontrado.</p>
+        <span>404</span>
+        <p>Producto no encontrado.</p>
         <a class="btn-back" href="?sec=inicio">← Volver al catálogo</a>
     </div>
 

@@ -60,7 +60,7 @@ class Producto
             $producto->_descripcion = $value->descripcion;
             $producto->_categoria   = $value->categoria;
             $producto->_precio      = $value->precio;
-            $producto->_img         = $value->img ?? '';
+            $producto->_img         = $value->img;
 
             $catalogo[] = $producto;
         }
@@ -88,6 +88,21 @@ class Producto
             if($c->_categoria == $categoria) $resultado[] = $c;
         }
         return $resultado;
+    }
+
+    public static function catalogo_x_precio(string $orden = 'asc'): array 
+    {
+        $catalogo = self::catalogo_completo();
+
+        usort($catalogo, function($a, $b) use ($orden) {
+            if ($orden === 'desc') {
+                return $b->getPrecio() <=> $a->getPrecio();
+            } else {
+                return $a->getPrecio() <=> $b->getPrecio();
+            }
+        });
+
+        return $catalogo;
     }
 
     public static function producto_x_id(mixed $idProducto): Producto|null 

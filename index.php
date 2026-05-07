@@ -8,11 +8,6 @@
 
     $view = '404';
     $seccion_title = 'Página no encontrada';
-    // $secciones_validas = Secciones::secciones_del_sitio();
-    // $secciones_menu = Secciones::secciones_menu();
-    // $seccion = isset($_GET['sec']) ? $_GET['sec'] : 'inicio';
-    // $view = !in_array($seccion, $secciones_validas) ? '404' : $seccion;
-    // $secciones = Secciones::secciones_del_sitio();
 
     foreach ($secciones as $value) {
         if($value->getVinculo() == $seccion_solicitada){
