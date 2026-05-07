@@ -6,6 +6,7 @@ class Producto
     private $_descripcion;
     private $_categoria;
     private $_precio;
+    private $_img;
 
     public function getId(){
         return $this->_id;
@@ -16,27 +17,33 @@ class Producto
     public function getDescripcion(){
         return $this->_descripcion;
     }
-     public function getCategoria(){
+    public function getCategoria(){
         return $this->_categoria;
     }
     public function getPrecio(){
         return $this->_precio;
     }
+    public function getImg(){
+        return $this->_img;
+    }
 
-    public function setId(){
+    public function setId($id){
         $this->_id = $id;
     }
-    public function setNombre(){
+    public function setNombre($nombre){
         $this->_nombre = $nombre;
     }
-    public function setDescripcion(){
+    public function setDescripcion($descripcion){
         $this->_descripcion = $descripcion;
     }
-     public function setCategoria(){
-        $this->_categoria = $_categoria;
+    public function setCategoria($categoria){
+        $this->_categoria = $categoria;
     }
-    public function setPrecio(){
+    public function setPrecio($precio){
         $this->_precio = $precio;
+    }
+    public function setImg($img){
+        $this->_img = $img;
     }
 
     public static function catalogo_completo():array 
@@ -48,11 +55,12 @@ class Producto
         foreach ($JSONData as $value){
             $producto = new self();
 
-            $producto->_id = $value->id;
-            $producto->_nombre = $value->nombre;
+            $producto->_id          = $value->id;
+            $producto->_nombre      = $value->nombre;
             $producto->_descripcion = $value->descripcion;
-            $producto->_categoria = $value->categoria;
-            $producto->_precio = $value->precio;
+            $producto->_categoria   = $value->categoria;
+            $producto->_precio      = $value->precio;
+            $producto->_img         = $value->img ?? '';
 
             $catalogo[] = $producto;
         }
@@ -82,7 +90,7 @@ class Producto
         return $resultado;
     }
 
-    public static function producto_x_id(mixed $idProducto): Producto | null 
+    public static function producto_x_id(mixed $idProducto): Producto|null 
     {
         $catalogo = self::catalogo_completo();
 

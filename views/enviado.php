@@ -1,31 +1,38 @@
 <?php
-    $cantidad = count($_GET);
-    $names = array_keys($_GET);
-    $valores = array_values($_GET);
     $campos = [];
-    for($i=0; $i<$cantidad; $i++){
-        if($names[$i] != "sec"){
-            $campos[$names[$i]] = $valores[$i];
+    foreach ($_GET as $key => $value) {
+        if ($key !== 'sec') {
+            $campos[$key] = $value;
         }
     }
-?>
-<h1>Formulario Enviado</h1>
-<div>
-    <div>
-        <div>
-            <div>
-            <?php
-                foreach ($campos as $key => $value) {
-                ?>
-                <div>
-                    <p><?= ucfirst($key); ?>:</p>
-                    <p><?= $value; ?></p>
-                </div>
-                <?php
-                }
-            ?>
-            </div>
-        </div>
-    </div>
-</div>
 
+    $labels = [
+        'nombre'  => 'Nombre',
+        'email'   => 'Correo electrónico',
+        'asunto'  => 'Asunto',
+        'mensaje' => 'Mensaje',
+    ];
+?>
+
+<h1 class="page-title">Mensaje enviado</h1>
+
+<div class="enviado-wrapper">
+
+    <p class="enviado-msg">Gracias por escribirnos. Recibimos tu consulta y te responderemos pronto.</p>
+
+    <div class="enviado-card">
+        <?php foreach ($campos as $key => $value): ?>
+            <div class="enviado-card__row">
+                <span class="enviado-card__label">
+                    <?= htmlspecialchars($labels[$key] ?? ucfirst($key)); ?>
+                </span>
+                <span class="enviado-card__value">
+                    <?= nl2br(htmlspecialchars($value)); ?>
+                </span>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <a class="btn-back" href="?sec=inicio">← Volver al catálogo</a>
+
+</div>

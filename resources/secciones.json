@@ -1,8 +1,20 @@
 [
     {
         "vinculo": "inicio",
-        "texto": "Inicio",
-        "title": "Inicio",
+        "texto": "Catálogo",
+        "title": "Catálogo",
+        "inMenu": true
+    },
+    {
+        "vinculo": "contacto",
+        "texto": "Contacto",
+        "title": "Contacto",
+        "inMenu": true
+    },
+    {
+        "vinculo": "alumno",
+        "texto": "Alumno",
+        "title": "Alumno",
         "inMenu": true
     },
     {
@@ -20,7 +32,7 @@
     {
         "vinculo": "enviado",
         "texto": "Enviado",
-        "title": "Enviado",
+        "title": "Formulario Enviado",
         "inMenu": false
     },
     {
