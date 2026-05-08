@@ -21,16 +21,16 @@
     <p class="enviado-msg">Gracias por escribirnos. Recibimos tu consulta y te responderemos pronto.</p>
 
     <div class="enviado-card">
-        <?php foreach ($campos as $key => $value): ?>
-            <div class="enviado-card__row">
-                <span class="enviado-card__label">
+        <?php foreach ($campos as $key => $value){ ?>
+            <div class="enviado-row">
+                <span class="enviado-label">
                     <?= htmlspecialchars($labels[$key] ?? ucfirst($key)); ?>
                 </span>
-                <span class="enviado-card__value">
+                <span class="enviado-value">
                     <?= nl2br(htmlspecialchars($value)); ?>
                 </span>
             </div>
-        <?php endforeach; ?>
+        <?php } ?>
     </div>
 
     <a class="btn-back" href="?sec=inicio">← Volver al catálogo</a>

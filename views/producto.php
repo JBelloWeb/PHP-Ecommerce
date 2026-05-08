@@ -8,18 +8,16 @@
     }
     $producto = Producto::producto_x_id($id);
 
-    if(!is_null($producto)): ?>
+    if(!is_null($producto)){?>
 
     <h1 class="page-title">Detalle del libro</h1>
 
     <div class="product-detail">
 
-        <figure>
-            <img
-                src="<?= htmlspecialchars($images_root . '/portadas/' . $producto->getImg()); ?>"
-                alt="Portada de <?= htmlspecialchars($producto->getNombre()); ?>"
-            >
-        </figure>
+        <?php 
+            $item = $producto;
+            require("components/product_picture.php"); 
+        ?>
 
         <div class="product-detail-info">
             <p class="detail-category"><?= htmlspecialchars($producto->getCategoria()); ?></p>
@@ -56,9 +54,7 @@
         });
     </script>
 
-    </div>
-
-<?php else: ?>
+<?php }else{ ?>
 
     <div class="error-404">
         <span>404</span>
@@ -66,4 +62,4 @@
         <a class="btn-back" href="?sec=inicio">← Volver al catálogo</a>
     </div>
 
-<?php endif; ?>
+<?php } ?>
